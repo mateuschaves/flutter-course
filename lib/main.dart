@@ -67,6 +67,12 @@ class FormularioTransferencia extends StatelessWidget{
 
             if(numeroConta != null && valor != null) {
               final transferenciaCriada = TransferenciaDto(valor, numeroConta);
+            } else {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Valor inválido 1!'),
+                ),
+              );
             }
           },
         ),
